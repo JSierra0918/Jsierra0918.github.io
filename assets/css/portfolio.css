@@ -3,22 +3,33 @@ table.portfolio-table {
    width: 100%;
 }
 
-table.portfolio-table img {
+table.center-container-portfolio tr{
+
     width: 33.3%;
 }
 
+table.portfolio-table img {
+    width: 100%;
+} 
+
 table.portfolio-table td{
     position: relative;
+    width: 272px;
+    overflow: hidden;
+    text-align: center;
+   
  }
 
  table.portfolio-table span {
     position: absolute;
-    top: 90%;
+    bottom: 10px;
     left: 0px;
     width: 100%;
-    background-color: green;
-    height: 20px;
- }
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #4aaaa5;
+    color: #fff;
+}
 
 .center-container-portfolio {
     border: #ccc solid 2px;
