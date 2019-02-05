@@ -1,0 +1,50 @@
+
+table.portfolio-table {
+   width: 100%;
+}
+
+table.portfolio-table img {
+    width: 33.3%;
+}
+
+table.portfolio-table td{
+    position: relative;
+ }
+
+ table.portfolio-table span {
+    position: absolute;
+    top: 90%;
+    left: 0px;
+    width: 100%;
+    background-color: green;
+    height: 20px;
+ }
+
+.center-container-portfolio {
+    border: #ccc solid 2px;
+    padding:  40px 20px;
+    margin: 40px auto 400px auto;
+    width: 920px;
+    clear: both;
+    background-color: #fff;
+}
+
+
+.center-container-portfolio h1 {
+    color: #4aaaa5;
+    font-weight: bold;
+
+}
+
+.center-container-portfolio h2, .center-container-portfolio p {
+    color: #9999a6;
+    font-size: 15px;
+}
+
+
+.center-container-portfolio img {
+    float: left;
+    width: 200px;
+    height: auto;
+    padding-right: 10px;
+}
