@@ -49,9 +49,9 @@ header {
 }
 
 .logo p {
-    font-size: 2.3em;
+    font-size: 1.5em;
     color: white;
-    padding-top: 20px;
+    padding-top: 30px;
     margin: 0;
 }
 
@@ -77,8 +77,8 @@ li#about, li#portfolio {
     padding-right: 20px;
 }
 
-.menu-container li:focus {
-    border-bottom: #4aaaa5 2px solid;
+.menu-container a:focus {
+    border-bottom: #fa8500 2px solid;
 }
 
 
@@ -111,6 +111,7 @@ li#about, li#portfolio {
 .center-container h2, .center-container p {
     color: #9999a6;
     font-size: 15px;
+    padding-top: 5px;
 }
 
 
@@ -137,11 +138,11 @@ footer {
     text-align: center;
 }
 
-footer p{
-    
+footer p {  
     color: #fff;
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
     bottom: -5px;
     font-size: 0.7em;
 }

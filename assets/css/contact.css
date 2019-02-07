@@ -20,3 +20,22 @@ input#contact-info, input#email-info {
 textarea {
     width: 99%;
 }
+
+input#btn-submit {
+    padding: 10px;
+    width: 14%;
+    background-color: #4aaaa5;
+    color: white;
+    font-size: 19px;
+    border: none;
+    margin-top: 20px;
+}
+
+input#btn-submit:hover {
+    cursor: pointer;
+    background-color: #116460;
+}
+
+input#btn-submit:active {
+    background-color: #22807b;
+}

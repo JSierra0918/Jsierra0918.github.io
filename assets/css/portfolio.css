@@ -38,17 +38,17 @@ table.portfolio-table {
 table.portfolio-table span {
     position: absolute;
     bottom: 10px;
-    right: 250px;
     width: 100%;
+    right: 0px;
     box-sizing: border-box;
     padding: 20px;
     background-color: #4aaaa5;
     color: #fff;
-    opacity: 0;
-    transition: all 1s ease;
+    box-sizing: border-box;
+    transition: all .5s ease;
 }
 
 #td1:hover span,#td2:hover span,#td3:hover span,#td5:hover span,#td6:hover span {
-    right: 0px;
-    opacity: 1;
+ 
+    background-color: #096965;
 }
