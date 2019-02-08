@@ -114,6 +114,18 @@ li#about, li#portfolio {
     padding-top: 5px;
 }
 
+.center-container p a {
+    background: #ececec;
+    color: #4aaaa5;
+    font-weight: bold;
+}
+
+.center-container p a:hover {
+    background: #dcdcdc;
+    color: #1e6f6b;
+    font-weight: bold;
+}
+
 
 .center-container img {
     float: left;
