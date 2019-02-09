@@ -37,7 +37,7 @@ table.portfolio-table {
 
 table.portfolio-table span {
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
     width: 100%;
     right: 0px;
     box-sizing: border-box;
