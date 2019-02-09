@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>My Portfolio Page</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
 </head>
@@ -18,7 +19,7 @@
             <nav class="menu-container">
                 <ul>
                     <li id="about"> <a href="./index.html">About</a></li>
-                    <li id="portfolio"> <a href="./portfolio.html">Portfolio</a></li>
+                    <li id="portfolio"> <a href="./portfolio-no-table.html">Portfolio</a></li>
                     <li id="contact"> <a href="./contact.html">contact</a></li>
                 </ul>
             </nav>
@@ -33,12 +34,12 @@
         <form action="#" method="POST" class="contact-form" id="contact-form">
 
             <label class="form-label" for="contact-info">Name: </label>
-            <input type="text" name="contact-info" id="contact-info" placeholder="First name and last name...">
+            <input type="text" name="contact-info" id="contact-info" placeholder="John Smith">
 
-            <label class="form-label" for="email-info">E-mail: </label>
-            <input type="text" name="email-info" id="email-info" placeholder="Email...">
+            <label class="form-label" for="email-info">E-mail </label>
+            <input type="text" name="email-info" id="email-info" placeholder="Email@gmail.com">
 
-            <label class="form-label" for="message-info">Message:</label>
+            <label class="form-label" for="message-info">Message</label>
         </form>
 
         <textarea cols="100" rows="10" form="contact-form" id="message-info" placeholder="..."></textarea>

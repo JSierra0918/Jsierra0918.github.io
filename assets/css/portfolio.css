@@ -1,29 +1,16 @@
-.center-container-portfolio {
-    border: #ccc solid 2px;
-    padding:  40px 20px;
-    margin: 40px auto 400px auto;
-    width: 920px;
-    clear: both;
-    background-color: #fff;
+.portfolio-container {
+    position: relative;
+     float: left;
+    /* display: inline-block; */
 }
 
 
-.center-container-portfolio h1 {
-    color: #4aaaa5;
-    font-weight: bold;
-
-}
-
-
-table.portfolio-table {
-   width: 100%;
-   border-spacing: 5px;
-}
-
-.portfolio-table td {
-    height: 250px;
-    width: 100px;
-    margin-left: 10px;
+.portfolio-content {
+ 
+    height: auto;
+    width: 250px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -31,24 +18,32 @@ table.portfolio-table {
     
 }
 
-.portfolio-table img {
+.portfolio-content img {
     width: 100%;
+    height: 200px;
+    padding: 0px;
 }
 
-table.portfolio-table span {
+.portfolio-content span {
     position: absolute;
-    bottom: 50px;
+    bottom: 10px;
     width: 100%;
     right: 0px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
     background-color: #4aaaa5;
     color: #fff;
     box-sizing: border-box;
     transition: all .5s ease;
 }
 
-#td1:hover span,#td2:hover span,#td3:hover span,#td5:hover span,#td6:hover span {
+.portfolio-content:hover span {
  
     background-color: #096965;
+}
+
+.portfolio-wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
 }
