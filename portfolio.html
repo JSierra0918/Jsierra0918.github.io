@@ -1,80 +1,127 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio Page</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/portfolio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Bootstrap-portfolio</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <!-- <img src="https://s.cdpn.io/3/kiwi.svg" alt="Your Name"/> -->
-                <p>Jorge Sierra</p>
-            </div>
-            <nav class="menu-container">
-                <ul>
-                    <li id="about"> <a href="./index.html">About</a></li>
-                    <li id="portfolio"> <a href="./portfolio.html">Portfolio</a></li>
-                    <li id="contact"> <a href="./contact.html">contact</a></li>
+    <header class="container-fluid border-bottom">
+        <div class=" container custom-header-container">
+            <nav class="navbar navbar-light">
+                <div class="custom-logo">
+                    <a href="#" class="navbar-brand custom-logo  text-white p-2">Jorge Sierra</a>
+                </div>
+
+                <ul class="nav custom-navbar">
+                    <li class="nav-item active"><a class="nav-link" href="./index.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
 
-    <section class="center-container-portfolio">
-        <h1>Portfolio</h1>
-        <hr>
-        <table class="portfolio-table">
-            <tr>
-                <td id="td1">
-                    <a href="https://github.com/JSierra0918"><img src="./assets/images/Octocat.png" alt="Jorge Sierra Portfolio Github">
-                        <span class="portfolio-title">Github Projects</span></a>
-                </td>
-                <td id="td2">
-                    <a href="https://www.deviantart.com/sulfonicxeno/gallery/"><img src="./assets/images/model.png" alt="Jorge Sierra Portfolio project 2">
-                        <span class="portfolio-title">3D Models</span></a>
-                </td>
-                <td id="td3">
-                    <a href="#"><img src="./assets/images/cats-q-c-640-480-5.jpg" alt="Jorge Sierra Portfolio project 3">
-                        <span class="portfolio-title">profile 3</span></a>
-                </td>
-                <td id="td4">
-                    <!-- <a href="#"><img src="./assets/images/profile-2.png" alt="Jorge Sierra Portfolio project 3" >
-                                <span class="portfolio-title">profile 3</span></a> -->
-                </td>
-            </tr>
+    <section class="container mt-5 custom-section-container  card  border-dark">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-12 card-body">
+                    <div class="row ">
+                        <div class="col-md-12 col-lg-12">
+                            <h1 class="card-title">About Me</h1>
+                            <hr #custom-hr>
+                        </div>
 
-            <tr>
-                <td id="td5">
-                    <a href="#"><img src="./assets/images/technics-q-c-640-480-6.jpg" alt="Jorge Sierra Portfolio profile 5">
-                        <span class="portfolio-title">Profile 5</span></a>
-                </td>
-                <td id="td6">
-                    <a href="#"><img src="./assets/images/technics-q-c-640-480-9.jpg" alt="Jorge Sierra Portfolio profile 6">
-                        <span class="portfolio-title">profile 6</span></a>
-                </td>
-                <td id="td7">
-                    <!-- <a href="#"><img src="./assets/images/profile-2.png" alt="Jorge Sierra Portfolio project 3" >
-                                    <span class="portfolio-title">profile 3</span></a> -->
-                </td>
-                <td id="td8">
-                    <!-- <a href="#"><img src="./assets/images/profile-2.png" alt="Jorge Sierra Portfolio project 3" >
-                                    <span class="portfolio-title">profile 3</span></a> -->
-                </td>
-            </tr>
-        </table>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-lg-4 col-sm-6 position-relative ">
+                            <div class="card mb-4 custom-figure">
+                                <a href="https://github.com/JSierra0918">
+                                    <img src="./assets/images/Octocat-2.png" alt="" class=" card-img-top  ">
+                                    <div class="position-absolute text-center custom-fig-caption">Github Projects</div>
 
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 position-relative">
+                            <div class="card mb-4 custom-figure">
+                                <a href="https://www.deviantart.com/sulfonicxeno/gallery/">
+                                    <img src="./assets/images/model.png" alt="" class="card-img-top ">
+                                    <div class="position-absolute text-center custom-fig-caption">3D Models</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 position-relative">
+                            <div class="card mb-4 custom-figure">
+                                <a href="https://jsierra0918.github.io/word-guess-game/">
+                                    <img src="./assets/images/word guess.png" alt="" class="card-img-top">
+                                    <div class="position-absolute text-center custom-fig-caption">Word Guess Game</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second section of Grid images -->
+                    <div class="row pt-4">
+                            <div class="col-lg-4 col-sm-6 position-relative ">
+                                <div class="card mb-4 custom-figure">
+                                    <a href="https://github.com/JSierra0918">
+                                        <img src="./assets/images/Octocat-2.png" alt="" class=" card-img-top  ">
+                                        <div class="position-absolute text-center custom-fig-caption"> futre Projects2</div>
+    
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 position-relative">
+                                <div class="card mb-4 custom-figure">
+                                    <a href="https://www.deviantart.com/sulfonicxeno/gallery/">
+                                        <img src="./assets/images/model.png" alt="" class="card-img-top ">
+                                        <div class="position-absolute text-center custom-fig-caption">Future Projects</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 position-relative">
+                                <div class="card mb-4 custom-figure">
+                                    <a href="">
+                                        <img src="./assets/images/technics-q-c-640-480-6.jpg" alt="" class="card-img-top">
+                                        <div class="position-absolute text-center custom-fig-caption">possible future Javascript </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
     </section>
 
-    <footer>
-        <p>Copyright&copy;</p>
+
+    <footer class="container-fluid custom-full-footer-container bg-light fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 footer-copyright text-center pt-3">
+                    <p>Copyright&copy;</p>
+                </div>
+
+            </div>
+        </div>
+
     </footer>
 
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,57 +1,81 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio Page</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Bootstrap-portfolio</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <!-- <img src="https://s.cdpn.io/3/kiwi.svg" alt="Your Name"/> -->
-                <p>Jorge Sierra</p>
-            </div>
-            <nav class="menu-container">
-                <ul>
-                    <li id="about"> <a href="./index.html">About</a></li>
-                    <li id="portfolio"> <a href="./portfolio.html">Portfolio</a></li>
-                    <li id="contact"> <a href="./contact.html">contact</a></li>
+    <header class="container-fluid border-bottom">
+        <div class=" container custom-header-container">
+            <nav class="navbar navbar-light">
+                <div class="custom-logo">
+                    <a href="#" class="navbar-brand custom-logo  text-white p-2">Jorge Sierra</a>
+                </div>
+
+                <ul class="nav custom-navbar">
+                    <li class="nav-item active"><a class="nav-link" href="./index.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
 
-    <section class="center-container">
+    <section class="container mt-5 custom-section-container  card  border-dark">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group contact-form">
+                        <h1 class="card-title">Contact</h1>
+                        <hr>
 
-        <h1> Contact</h1>
-        <hr>
-        <form action="#" method="POST" class="contact-form" id="contact-form">
+                        <label for="name-info">Name</label>
+                        <input type="text" class="form-control" id="name-info" aria-describedby="nameInfo" placeholder="First and Last name">
+                        <small id="nameInfo" class="form-text text-muted">John Smith</small>
+                    </div>
 
-            <label class="form-label" for="contact-info">Name: </label>
-            <input type="text" name="contact-info" id="contact-info" placeholder="First name and last name...">
-
-            <label class="form-label" for="email-info">E-mail: </label>
-            <input type="text" name="email-info" id="email-info" placeholder="Email...">
-
-            <label class="form-label" for="message-info">Message:</label>
-        </form>
-
-        <textarea cols="100" rows="10" form="contact-form" id="message-info" placeholder="..."></textarea>
-        <input type="button" id="btn-submit" name="btn-submit" value="Submit" >
-
-
-
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="email-info" aria-describedby="email-info"
+                            placeholder="Enter email">
+                        <small id="email-info" class="form-text text-muted">JohnSmith@example.com</small>
+                    </div>
+                    <div class="form-group">
+                            <label for="message-info">Enter Message</label>
+                            <textarea class="form-control" id="message-info" rows="3" placeholder="..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>Copyright&copy;</p>
+    <footer class="container-fluid custom-full-footer-container bg-light fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 footer-copyright text-center pt-3">
+                    <p>Copyright&copy;</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

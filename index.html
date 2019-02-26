@@ -1,55 +1,89 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio Page</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Bootstrap-portfolio</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <!-- <img src="https://s.cdpn.io/3/kiwi.svg" alt="Your Name"/> -->
-                <p>Jorge Sierra</p>
-            </div>
-            <nav class="menu-container">
-                <ul>
-                    <li id="about"> <a href="./index.html">About</a></li>
-                    <li id="portfolio"> <a href="./portfolio.html">Portfolio</a></li>
-                    <li id="contact"> <a href="./contact.html">contact</a></li>
+    <header class="container-fluid border-bottom">
+        <div class=" container custom-header-container">
+            <nav class="navbar navbar-collapse-sm ">
+                <div class="custom-logo ">
+                    <a href="#" class="navbar-brand text-white p-2">Jorge Sierra</a>
+                </div>
+
+                <ul class="nav custom-navbar flex-column flex-sm-row ">
+                    <li class="nav-item active"><a class="nav-link" href="./index.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
 
-    <section class="center-container">
+    <section class="container mt-5 custom-section-container  card  border-dark">
+        <div class="row">
+            <div class="col-md-12 card-body">
+                <div class="row ">
+                    <div class="col-md-12 col-lg-12">
+                        <h1 class="card-title">About Me</h1>
+                        <hr #custom-hr>
+                    </div>
 
-        <h1> About Me</h1>
-        <hr>
-        <img src="assets/images/profile.png" alt="Jorge Sierra">
-        <p>Hello, my name is Jorge. I studied Game Design and Development with an emphasis on 3D Models - I haven't
-            touched it in a long time, <a href="https://www.deviantart.com/sulfonicxeno/art/VW-Bug-453954117">but
-            here's some work if you'd like to see.</a> For the past 5 years I have been working as a marketing
-            assistant dealing with all digital facets for Neutronics Inc. I became interested in web design after
-            having to delve into it for the company. We used the wordpress platform with the Divi plugin - this was a
-            blessing and a curse as modifying anything against their template would require having to deep dive into
-            child themes, php, and css. This helped me understand the concept of what web development is and what it
-            takes. Frustration and all, I enjoyed the whole process and I'm excited to delve into this possible new
-            career!</p>
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, odio mollitia. Repudiandae corrupti,
-            eaque unde sequi recusandae doloribus nisi quidem. Aperiam reiciendis iure itaque temporibus voluptate dolor 
-            perspiciatis sint architecto!</p>
-
+                </div>
+                <div class="row custom-About-container">
+                    <div class="col-md-3">
+                        <img class="card-img-top" src="./assets/images/profile.png" alt="Jorge Sierra Profile picture"
+                            width="200px" height="auto">
+                    </div>
+                    <div class="col-md-9 pb-5">
+                        <p class="card-text">Hello, my name is Jorge. I studied Game Design and Development with an
+                            emphasis on 3D Models
+                            - I
+                            haven't touched it in a long time, <a href="https://www.deviantart.com/sulfonicxeno/gallery/">but
+                                here's some work if you'd like to see.</a> For the past 5
+                            years I have been working as a marketing assistant dealing with all digital facets for
+                            Neutronics Inc. I became interested in web development after having to delve into it for the
+                            company. We used the wordpress platform with the Divi plugin - this was a blessing and a
+                            curse
+                            as modifying anything against their template would require having to deep dive into child
+                            themes, php, and css. This helped me understand the concept of what web development is and
+                            what
+                            it takes. Frustration and all, I enjoyed the whole process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>Copyright&copy;</p>
+    <footer class="container-fluid custom-full-footer-container bg-light fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 footer-copyright text-center pt-3">
+                    <p>Copyright&copy;</p>
+                </div>
+
+            </div>
+        </div>
+
     </footer>
 
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
