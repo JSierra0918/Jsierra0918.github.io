@@ -1,38 +1,384 @@
 body {
-    /* background: url(../images/crossline-dots.png); */
+  font-size: 18px;
+  color: #191919;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-header {
-  
+.skew-c {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(49%, #fff), color-stop(50%, #823A9C));
+  background: linear-gradient(to left bottom, #fff 49%, #823A9C 50%);
 }
 
-.custom-logo a {
-    background-color: black;
-    font-weight: bolder;
-    
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.custom-navbar li a{
-    color: black;
-    transition: all .5s;
+.header nav {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  height: 4em;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
-.custom-navbar li a:hover{
-    color: red;
+.header nav ul.ul-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
 }
 
-
-hr {
-    border-top: 4px dotted;
+.header nav ul.ul-flex li {
+  margin: 10px 0;
 }
 
-.custom-fig-caption {
-    bottom: 5px;
+.header nav ul.ul-flex li a {
+  line-height: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  opacity: 0.8;
+  -webkit-transition: .2s all ease-in;
+  transition: .2s all ease-in;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.header nav ul.ul-flex li a:hover {
+  color: #505050;
+  text-decoration: underline;
+}
+
+.header .scrolled {
+  background-color: black;
+  color: white;
+}
+
+.active {
+  border-bottom: 1px solid transparent;
+}
+
+section.about-me-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 5em;
+  padding-left: 2em;
+  height: 100vh;
+}
+
+section.about-me-flex .about-me-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 2em;
+}
+
+section.about-me-flex .about-me-text h1 {
+  text-align: left;
+  font-weight: 600;
+  font-size: 4em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+section.about-me-flex .about-me-text h2 {
+  font-size: 3em;
+}
+
+section.about-me-flex .about-me-text p {
+  font-size: .9em;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+section.about-me-flex .about-me-text .resume-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.about-me-flex .about-me-text .resume-flex a {
+  color: #000;
+  margin: 5px;
+}
+
+section.about-me-flex .about-me-text .resume-flex a:hover {
+  color: #c1ce00;
+}
+
+section.about-me-flex .about-me-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.about-me-flex .about-me-img .profile-img {
+  width: 20em;
+  height: 20em;
+  max-width: 15em;
+  z-index: -1;
+}
+
+.circle-clip {
+  -webkit-clip-path: circle(40% at 50% 50%);
+          clip-path: circle(40% at 50% 50%);
+}
+
+.portfolio {
+  margin-top: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio h2 {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.portfolio .portfolio-flex {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio .portfolio-flex .portfolio-component {
+  width: 20em;
+  background: #f5f8ee;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.portfolio .portfolio-flex .portfolio-component:hover {
+  background-color: #f1d6c0;
+}
+
+.portfolio .portfolio-flex .portfolio-component .port-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.portfolio .portfolio-flex .portfolio-component .port-title img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio .portfolio-flex .portfolio-component .port-title p {
+  margin-top: 5px;
+}
+
+.portfolio .portfolio-flex .portfolio-component .port-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 2px solid;
+}
+
+.portfolio .portfolio-flex .portfolio-component .port-links a {
+  color: #000;
+  padding: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.portfolio .portfolio-flex .portfolio-component .port-links a:hover {
+  color: #c1ce00;
+  font-size: 1.1em;
+}
+
+.portfolio .portfolio-flex .portfolio-component .languages-used {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio .portfolio-flex .portfolio-component .languages-used i {
+  margin: 5px;
+}
+
+.form-container {
+  padding: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-container h2 {
+  font-size: 3em;
+}
+
+.form-container form#contactForm {
+  background: #e2e2e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.form-container form#contactForm .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-container form#contactForm .input-wrapper input {
+  outline: none;
+  border: 0px;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 49%;
+}
+
+.form-container form#contactForm .button {
+  border: 0px;
+  color: white;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: deepskyblue;
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: .3s all ease-in;
+  transition: .3s all ease-in;
+}
+
+.form-container form#contactForm .button:hover {
+  background-color: #00ffd5;
+}
+
+.form-container form#contactForm textarea {
+  outline: none;
+  border: 0px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 860px) {
+  section.about-me-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: auto;
+    padding-top: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .portfolio-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form-container form#contactForm {
     width: 100%;
-    background-color: #007bff;
-    color: #fff;
-} 
-
-.custom-figure:hover .custom-fig-caption{
-    color: rgb(192, 192, 192);
+    padding: 10px;
+  }
 }
+/*# sourceMappingURL=style.css.map */
