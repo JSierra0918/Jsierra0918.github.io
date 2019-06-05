@@ -31,10 +31,40 @@ $(document).ready(() => {
     });
 
     //add a hover arrow to cards whose height is passed 60px
- langArea.each((int, element) => {
-    // console.log(element);
-    console.log($(this).height());
- })
+
+    const queryLangArea = document.querySelectorAll(".languages-used")
+
+    // for (let i = 0; i < queryLangArea.length; i++) {
+    //     const element = queryLangArea[i];
+    //     const elementHeight = element.offsetHeight;
+    //     console.log(elementHeight);
+    //     if (elementHeight > 60){
+    //         // element.style.height = "60px";
+    //         console.log(element);
+    //         console.log(elementHeight);
+    //         element.style.color = "red"
+    //         createExpandArrow(element);
+    //     }
+        
+    // }
+
+    langArea.each((iteration, item) => {
+        item[0].css("color", "red");
+        console.log($(this).css("color", "red"));
+        // console.log("This is the height: ")
+       for (let index = 0; index < item.length; index++) {
+           const element = item[index];
+           console.log(item.css("height"));
+       }
+    });
+
+    function createExpandArrow (element) {
+        const hoverDiv =  document.createElement(`<div class="hover-more"></div>`);
+        const arrow =  document.createElement(`<span class="downArrow"><i class="fas fa-chevron-down"></i></span>`);
+
+        hoverDiv.appendChild(arrow);
+        element.appendChild(hoverDiv);
+    }
 
     function expandEffect() {
         const thisLang = $(this);
