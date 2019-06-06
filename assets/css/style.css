@@ -210,7 +210,11 @@ section.about-me-flex .about-me-img .profile-img {
           justify-content: space-between;
 }
 
-.portfolio .portfolio-flex .portfolio-component:hover, .portfolio .portfolio-flex .portfolio-component .hover-more {
+.portfolio .portfolio-flex .portfolio-component:hover {
+  background-color: #f1d6c0;
+}
+
+.portfolio .portfolio-flex .portfolio-component:hover .languages-used .hover-more {
   background-color: #f1d6c0;
 }
 

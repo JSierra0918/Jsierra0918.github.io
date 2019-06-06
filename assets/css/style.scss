@@ -172,22 +172,26 @@ section.about-me-flex {
             flex-direction: column;
             justify-content: space-between;
 
-            &:hover, .hover-more {
-                background-color: #f1d6c0;
-            }
+                &:hover {
+                    background-color: #f1d6c0;
 
-            .port-title {
-                display: flex;
-                flex-direction: column;
-
-                img {
-                    width: 100%;
-                    object-fit: cover;
+                    .languages-used .hover-more {
+                        background-color: #f1d6c0;
+                    }
                 }
 
-                p {
-                    margin-top: 5px;
-                }
+                .port-title {
+                    display: flex;
+                    flex-direction: column;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    p {
+                        margin-top: 5px;
+                    }
             }
 
             .port-links {

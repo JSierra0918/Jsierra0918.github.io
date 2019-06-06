@@ -30,34 +30,18 @@ $(document).ready(() => {
             scrollTop: $(href).offset().top - 75}, 1000);
     });
 
-    //add a hover arrow to cards whose height is passed 60px
-
-    const queryLangArea = document.querySelectorAll(".languages-used")
-
-    // for (let i = 0; i < queryLangArea.length; i++) {
-    //     const element = queryLangArea[i];
-    //     const elementHeight = element.offsetHeight;
-    //     console.log(elementHeight);
-    //     if (elementHeight > 60){
-    //         // element.style.height = "60px";
-    //         console.log(element);
-    //         console.log(elementHeight);
-    //         element.style.color = "red"
-    //         createExpandArrow(element);
-    //     }
-        
-    // }
-
+    //iterate through language area class and find the ones who exceed the height limit
     langArea.each((iteration, item) => {
-     
+
+        const originalHeight = $(item).height();   
         const langDiv = $(item);
-        console.log(item);
-        console.log($(item).height());
+
         // console.log("This is the height: ")
        if (langDiv.height() > 60){
            langDiv.css("height", "60px");
-           createExpandArrow(langDiv)
+           createExpandArrow(langDiv);
        }
+       
     });
 
     function createExpandArrow (element) {
