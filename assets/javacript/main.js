@@ -2,6 +2,7 @@ $(document).ready(() => {
 
     const card = $(".portfolio-component");
     const langArea = $(".languages-used");
+    let hoverCheck = false;
     // --------------------Smooth Scroll
     var header = $(".header nav");
 
@@ -27,36 +28,66 @@ $(document).ready(() => {
         console.log(href);
 
         $("body, html").animate({
-            scrollTop: $(href).offset().top - 75}, 1000);
+            scrollTop: $(href).offset().top - 75
+        }, 1000);
     });
 
     //iterate through language area class and find the ones who exceed the height limit
     langArea.each((iteration, item) => {
 
-        const originalHeight = $(item).height();   
+        const originalHeight = $(item).height();
         const langDiv = $(item);
 
         // console.log("This is the height: ")
-       if (langDiv.height() > 60){
-           langDiv.css("height", "60px");
-           createExpandArrow(langDiv);
-       }
-       
+        if (langDiv.height() > 60) {
+            langDiv.css("height", "60px");
+            createExpandArrow(langDiv);
+        }
+
+
+
     });
 
-    function createExpandArrow (element) {
-        const hoverDiv =  $(`<div class="hover-more"></div>`);
-        const arrow =  $(`<span class="downArrow"><i class="fas fa-chevron-down"></i></span>`);
+    function createExpandArrow(element) {
+        const hoverDiv = $(`<div class="hover-more"></div>`);
+        const arrow = $(`<span class="downArrow"><i class="fas fa-chevron-down"></i></span>`);
 
         hoverDiv.append(arrow);
         element.append(hoverDiv);
     }
 
-    function expandEffect() {
-        const thisLang = $(this);
-        console.log(thisLang);
-        console.log("Ready!! ");
+    function expandEffect(thisDiv) {
+
+
+        var curHeight = thisDiv.parent().height();
+        thisDiv.parent().css("height", "auto");
+        var autoHeight = thisDiv.parent().height();
+
+        thisDiv.parent().height(curHeight).animate({
+            height: autoHeight
+        }, 1000);
+
     }
+
+    function contractEffect(thisDiv) {
+        thisDiv.parent().animate({
+            height: "60px"
+        }, 1000);
+    }
+
+
     //when you have loaded everything check the cards to see if their height is over 60px;
-    $(document).on("load", ".languages-used", expandEffect);
+    $(".hover-more")
+        .mouseenter(function () {
+            // if parent height is 60, expand
+            console.log($(this).parent().height());
+            if ($(this).parent().height() === 60) {
+                expandEffect($(this))
+
+            } else if (($(this).parent().height() > 60)) {
+                contractEffect($(this));
+            }
+
+        })
+
 });
