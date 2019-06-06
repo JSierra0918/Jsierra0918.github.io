@@ -49,21 +49,23 @@ $(document).ready(() => {
     // }
 
     langArea.each((iteration, item) => {
-        item[0].css("color", "red");
-        console.log($(this).css("color", "red"));
+     
+        const langDiv = $(item);
+        console.log(item);
+        console.log($(item).height());
         // console.log("This is the height: ")
-       for (let index = 0; index < item.length; index++) {
-           const element = item[index];
-           console.log(item.css("height"));
+       if (langDiv.height() > 60){
+           langDiv.css("height", "60px");
+           createExpandArrow(langDiv)
        }
     });
 
     function createExpandArrow (element) {
-        const hoverDiv =  document.createElement(`<div class="hover-more"></div>`);
-        const arrow =  document.createElement(`<span class="downArrow"><i class="fas fa-chevron-down"></i></span>`);
+        const hoverDiv =  $(`<div class="hover-more"></div>`);
+        const arrow =  $(`<span class="downArrow"><i class="fas fa-chevron-down"></i></span>`);
 
-        hoverDiv.appendChild(arrow);
-        element.appendChild(hoverDiv);
+        hoverDiv.append(arrow);
+        element.append(hoverDiv);
     }
 
     function expandEffect() {
