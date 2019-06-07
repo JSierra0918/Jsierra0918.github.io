@@ -219,8 +219,7 @@ section.about-me-flex {
                 justify-content: space-around;
                 margin-top: 8px;
                 position: relative;
-                // height: 60px;
-                
+
                 i {
                     margin: 5px;
                 }
@@ -308,7 +307,7 @@ section.about-me-flex {
 
 
 
-@media screen and (max-width: 860px){
+@media screen and (max-width: 1020px){
 
     section.about-me-flex {
         flex-direction: column-reverse;

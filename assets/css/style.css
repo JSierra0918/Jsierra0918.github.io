@@ -380,7 +380,7 @@ section.about-me-flex .about-me-img .profile-img {
           box-sizing: border-box;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1020px) {
   section.about-me-flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
