@@ -38,9 +38,11 @@ $(document).ready(() => {
     langArea.each((iteration, item) => {
         const langDiv = $(item);
         // console.log("This is the height: ")
-        if (langDiv.height() > 60) {
+        if (langDiv.height() > 70) {
             langDiv.css("height", "60px");
             createExpandArrow(langDiv);
+        }else {
+            langDiv.css("height", "60px");
         }
     });
 
