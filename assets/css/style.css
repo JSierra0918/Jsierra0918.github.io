@@ -405,5 +405,8 @@ section.about-me-flex .about-me-img .profile-img {
     width: 100%;
     padding: 10px;
   }
+  .portfolio .portfolio-flex {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
