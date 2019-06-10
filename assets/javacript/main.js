@@ -92,11 +92,11 @@ $(document).ready(() => {
     })
 
     // ======== MOBILE CLICK =========
-    $(window).resize(function () {
+    // $(window).resize(function () {
 
-        if (windowWidth < 1020) {
-            $(document).on("click", ".hover-more", expandCheck)
-        }
-    });
+    //     if (windowWidth < 1020) {
+    //         $(document).on("click", ".hover-more", expandCheck)
+    //     }
+    // });
 
 });
