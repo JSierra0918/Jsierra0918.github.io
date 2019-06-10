@@ -1,8 +1,14 @@
 $(document).ready(() => {
+    //Global variables
+    const windowHeight = $(window).height(); // New height
+    const windowWidth = $(window).width();
 
     const card = $(".portfolio-component");
     const langArea = $(".languages-used");
     let hoverCheck = false;
+
+
+
     // --------------------Smooth Scroll
     var header = $(".header nav");
 
@@ -20,12 +26,9 @@ $(document).ready(() => {
     $(document).on("click", ".scroll", (event) => {
 
         event.preventDefault();
-        console.log(event);
 
+        //grab href link
         var href = event.target.hash;
-
-        console.log($(this.hash));
-        console.log(href);
 
         $("body, html").animate({
             scrollTop: $(href).offset().top - 75
@@ -41,7 +44,7 @@ $(document).ready(() => {
         if (langDiv.height() > 70) {
             langDiv.css("height", "60px");
             createExpandArrow(langDiv);
-        }else {
+        } else {
             langDiv.css("height", "60px");
         }
     });
@@ -73,17 +76,27 @@ $(document).ready(() => {
         }, 750);
     }
 
+    function expandCheck(thisDiv) {
+        if (thisDiv.parent().height() === 60) {
+            expandEffect(thisDiv)
+        } else if ((thisDiv.parent().height() > 60)) {
+            contractEffect(thisDiv);
+        }
+    }
+
 
     //when you have loaded everything check the cards to see if their height is over 60px;
-    $(".hover-more")
-        .mouseenter(function () {
-            // if parent height is 60, expand
-            console.log($(this).parent().height());
-            if ($(this).parent().height() === 60) {
-                expandEffect($(this))
-            } else if (($(this).parent().height() > 60)) {
-                contractEffect($(this));
-            }
-        })
+    $(".hover-more").mouseenter(function () {
+        // if parent height is 60, expand
+        expandCheck($(this));
+    })
+
+    // ======== MOBILE CLICK =========
+    $(window).resize(function () {
+
+        while (windowWidth < 1020) {
+            $(document).on("click", ".hover-more", expandCheck)
+        }
+    });
 
 });
