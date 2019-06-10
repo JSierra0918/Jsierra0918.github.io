@@ -20,10 +20,11 @@ body {
     left: 0px;
     background: linear-gradient(to left bottom, #fff 49%, #823A9C 50%);
 }
+
 .header {
     display: flex;
     justify-content: center;
-  
+
 
     nav {
         width: 100%;
@@ -41,10 +42,10 @@ body {
             color: #000;
             justify-content: space-around;
             list-style-type: none;
-        
+
             li {
                 margin: 10px 0;
-        
+
                 a {
                     line-height: 30px;
                     font-weight: bold;
@@ -53,7 +54,7 @@ body {
                     opacity: 0.8;
                     transition: .2s all ease-in;
                     transform-origin: center bottom;
-        
+
                     &:hover {
                         color: rgb(80, 80, 80);
                         text-decoration: underline;
@@ -111,7 +112,7 @@ section.about-me-flex {
             flex-wrap: wrap;
 
             a {
-                color:$linkColor;
+                color: $linkColor;
                 margin: 5px;
 
                 &:hover {
@@ -127,7 +128,7 @@ section.about-me-flex {
         justify-content: center;
 
         .profile-img {
-            width:20em;
+            width: 20em;
             height: 20em;
             max-width: 15em;
             z-index: -1;
@@ -161,7 +162,8 @@ section.about-me-flex {
         flex-wrap: wrap;
 
         .portfolio-component {
-            width: 20em;
+            max-width: 20em;
+            width: 100%;
             background: $cardBG;
             overflow: hidden;
             box-sizing: border-box;
@@ -172,26 +174,26 @@ section.about-me-flex {
             flex-direction: column;
             justify-content: space-between;
 
-                &:hover {
-                    background-color: #f1d6c0;
+            &:hover {
+                background-color: #f1d6c0;
 
-                    .languages-used .hover-more {
-                        background-color: #f1d6c0;
-                    }
+                .languages-used .hover-more {
+                    background-color: #f1d6c0;
+                }
+            }
+
+            .port-title {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
                 }
 
-                .port-title {
-                    display: flex;
-                    flex-direction: column;
-
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                    }
-
-                    p {
-                        margin-top: 5px;
-                    }
+                p {
+                    margin-top: 5px;
+                }
             }
 
             .port-links {
@@ -206,10 +208,10 @@ section.about-me-flex {
                     padding: 5px;
                     transition: all .3s ease-in-out;
 
-                        &:hover {
-                            color: #c1ce00;
-                            font-size: 1.1em;
-                        }
+                    &:hover {
+                        color: #c1ce00;
+                        font-size: 1.1em;
+                    }
                 }
             }
 
@@ -307,7 +309,7 @@ section.about-me-flex {
 
 
 
-@media screen and (max-width: 1020px){
+@media screen and (max-width: 1020px) {
 
     section.about-me-flex {
         flex-direction: column-reverse;
@@ -321,7 +323,7 @@ section.about-me-flex {
         align-items: center;
     }
 
-    .form-container form#contactForm{
+    .form-container form#contactForm {
         width: 100%;
         padding: 10px;
     }
@@ -332,5 +334,29 @@ section.about-me-flex {
 
     .ul-flex {
         padding: 0px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .header nav {
+        height: auto;
+        text-align: center;
+    }
+
+    .ul-flex {
+        flex-flow: column;
+    }
+
+    .ul-flex li:hover {
+        background: white;
+    }
+
+    .ul-flex li:hover a {
+        color: black!important;
+    }
+
+    .header nav ul.ul-flex li a:hover {
+        color: $textColor;
     }
 }

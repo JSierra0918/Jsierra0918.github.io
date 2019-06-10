@@ -190,7 +190,8 @@ section.about-me-flex .about-me-img .profile-img {
 }
 
 .portfolio .portfolio-flex .portfolio-component {
-  width: 20em;
+  max-width: 20em;
+  width: 100%;
   background: #f5f8ee;
   overflow: hidden;
   -webkit-box-sizing: border-box;
@@ -410,6 +411,28 @@ section.about-me-flex .about-me-img .profile-img {
   }
   .ul-flex {
     padding: 0px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header nav {
+    height: auto;
+    text-align: center;
+  }
+  .ul-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .ul-flex li:hover {
+    background: white;
+  }
+  .ul-flex li:hover a {
+    color: black !important;
+  }
+  .header nav ul.ul-flex li a:hover {
+    color: #191919;
   }
 }
 /*# sourceMappingURL=style.css.map */
