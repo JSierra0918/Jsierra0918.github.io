@@ -94,7 +94,7 @@ $(document).ready(() => {
     // ======== MOBILE CLICK =========
     $(window).resize(function () {
 
-        while (windowWidth < 1020) {
+        if (windowWidth < 1020) {
             $(document).on("click", ".hover-more", expandCheck)
         }
     });
