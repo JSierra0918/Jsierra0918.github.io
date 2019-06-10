@@ -86,15 +86,16 @@ $(document).ready(() => {
 
 
     //when you have loaded everything check the cards to see if their height is over 60px;
-    // $(".hover-more").mouseenter(function () {
-    //     // if parent height is 60, expand
-    //     expandCheck($(this));
+    $(".hover-more").mouseenter(function () {
+        // if parent height is 60, expand
+        expandCheck($(this));
 
-    // });
+    });
 
     $(document).on("click", ".hover-more", function () {
         expandCheck($(this));
-    })
+    });
+
     // ======== MOBILE CLICK =========
     // $(window).resize(function () {
 
