@@ -187,6 +187,9 @@ section.about-me-flex .about-me-img .profile-img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .portfolio .portfolio-flex .portfolio-component {
@@ -320,6 +323,10 @@ section.about-me-flex .about-me-img .profile-img {
   font-size: 3em;
 }
 
+.form-container h2 a {
+  color: #191919;
+}
+
 .form-container form#contactForm {
   background: #e2e2e2;
   display: -webkit-box;
@@ -381,6 +388,23 @@ section.about-me-flex .about-me-img .profile-img {
           box-sizing: border-box;
 }
 
+.email-link {
+  width: 70%;
+  text-align: center;
+  padding: 20px;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.email-link a {
+  color: black;
+}
+
+.email-link a:hover {
+  color: deepskyblue;
+}
+
 @media screen and (max-width: 1020px) {
   section.about-me-flex {
     -webkit-box-orient: vertical;
@@ -411,6 +435,12 @@ section.about-me-flex .about-me-img .profile-img {
   }
   .ul-flex {
     padding: 0px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .email-link a {
+    font-size: 2rem;
   }
 }
 
