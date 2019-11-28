@@ -7,8 +7,6 @@ $(document).ready(() => {
     const langArea = $(".languages-used");
     let hoverCheck = false;
 
-
-
     // --------------------Smooth Scroll
     var header = $(".header nav");
 
@@ -51,7 +49,7 @@ $(document).ready(() => {
 
     function createExpandArrow(element) {
         const hoverDiv = $(`<div class="hover-more"></div>`);
-        const arrow = $(`<span class="downArrow"><i class="fas fa-chevron-down"></i></span>`);
+        const arrow = $(`<span class="downArrow"><i class="fas fa-chevron-down"></i>more</span>`);
         hoverDiv.append(arrow);
         element.append(hoverDiv);
     }
@@ -95,13 +93,5 @@ $(document).ready(() => {
     $(document).on("click", ".hover-more", function () {
         expandCheck($(this));
     });
-
-    // ======== MOBILE CLICK =========
-    // $(window).resize(function () {
-
-    //     if (windowWidth < 1020) {
-    //         $(document).on("click", ".hover-more", expandCheck)
-    //     }
-    // });
 
 });
