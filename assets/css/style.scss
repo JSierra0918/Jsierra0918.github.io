@@ -1,5 +1,5 @@
 // var
-$textColor: #191919;
+$textColor: hsl(0, 0%, 10%);
 $linkColor: #000;
 $bgColor: #fff;
 $cardBG: #f5f8ee;
@@ -258,7 +258,11 @@ section.about-me-flex {
         font-size: $h2Size;
 
         a {
-            color: $textColor  
+            color: $textColor;
+            
+            &:hover {
+                color: #c1ce00;
+            }
         }        
     }
 
