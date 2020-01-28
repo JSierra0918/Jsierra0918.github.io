@@ -39,7 +39,8 @@ $(document).ready(() => {
     langArea.each((iteration, item) => {
         const langDiv = $(item);
         // console.log("This is the height: ")
-        if (langDiv.height() > 70) {
+        if (langDiv.height() > 60) {
+            console.log(langDiv);
             langDiv.css("height", "60px");
             createExpandArrow(langDiv);
         } else {
@@ -60,7 +61,7 @@ $(document).ready(() => {
         //change the paretn's height so that it has it's natural height
         thisDiv.parent().css("height", "auto");
         //store the natural height number
-        var autoHeight = thisDiv.parent().height();
+        var autoHeight = thisDiv.parent().height()+40;
         //emulate the height change.
         thisDiv.parent().height(curHeight).animate({
             height: autoHeight
@@ -76,6 +77,7 @@ $(document).ready(() => {
 
     function expandCheck(thisDiv) {
         if (thisDiv.parent().height() === 60) {
+            console.log("expandCheck()",thisDiv);
             expandEffect(thisDiv)
         } else if ((thisDiv.parent().height() > 60)) {
             contractEffect(thisDiv);
