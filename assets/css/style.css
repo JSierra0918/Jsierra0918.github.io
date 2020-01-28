@@ -1,6 +1,6 @@
 body {
   font-size: 18px;
-  color: #191919;
+  color: #1a1a1a;
   font-family: 'Montserrat', sans-serif;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -325,7 +325,11 @@ section.about-me-flex .about-me-img .profile-img {
 }
 
 .form-container h2 a {
-  color: #191919;
+  color: #1a1a1a;
+}
+
+.form-container h2 a:hover {
+  color: #c1ce00;
 }
 
 .form-container form#contactForm {
@@ -463,7 +467,7 @@ section.about-me-flex .about-me-img .profile-img {
     color: black !important;
   }
   .header nav ul.ul-flex li a:hover {
-    color: #191919;
+    color: #1a1a1a;
   }
 }
 /*# sourceMappingURL=style.css.map */
