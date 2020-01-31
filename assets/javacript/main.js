@@ -61,7 +61,7 @@ $(document).ready(() => {
         //change the paretn's height so that it has it's natural height
         thisDiv.parent().css("height", "auto");
         //store the natural height number
-        var autoHeight = thisDiv.parent().height()+40;
+        var autoHeight = thisDiv.parent().height();
         //emulate the height change.
         thisDiv.parent().height(curHeight).animate({
             height: autoHeight
